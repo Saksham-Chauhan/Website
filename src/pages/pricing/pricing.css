@@ -1,0 +1,43 @@
+.pricing {
+  background: linear-gradient(#040e27, rgba(4, 14, 39, 0.3));
+}
+.pricing > h1 {
+  color: var(--white);
+  text-align: center;
+  padding-top: 2rem;
+}
+.pricing > p {
+  color: var(--white);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* for bg images */
+
+.left-bg {
+  position: absolute;
+  left: 0;
+  opacity: 0.2;
+  z-index: 0;
+  height: 100%;
+}
+
+.right-bg {
+  position: absolute;
+  right: 0;
+  opacity: 0.2;
+  z-index: 0;
+  height: 100%;
+}
+
+/* Card container */
+
+.card-container {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
