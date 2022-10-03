@@ -1,0 +1,104 @@
+@import "../../App.scss";
+
+.blog-main {
+  width: 80%;
+  margin: 3rem auto;
+  @include flex-centerd(row, flex-start, center);
+  flex-wrap: wrap;
+  .blog-main-img {
+    width: 65%;
+    & > img {
+      @include wh(100%, 100%);
+    }
+    @include media(1150px) {
+      width: 55%;
+    }
+    @include media(900px) {
+      width: 80%;
+    }
+    @include media(380px) {
+      width: 95%;
+    }
+  }
+  .blog-main-text {
+    padding: 0 3rem;
+    width: 35%;
+    & > h2 {
+      @include font(22px, $white, 600);
+    }
+    & > div {
+      @include font(16px, $teal, 500);
+      padding: 0;
+      margin: 1rem 0;
+    }
+    & > p {
+      @include font(16px, $light-white, 400);
+      padding-bottom: 1rem;
+    }
+    @include media(1150px) {
+      width: 45%;
+    }
+    @include media(1000px) {
+      padding-right: 0;
+    }
+    @include media(900px) {
+      width: 80%;
+      margin-top: 1rem;
+      padding: 0;
+    }
+    @include media(380px) {
+      width: 95%;
+    }
+  }
+}
+.date-sec {
+  @include font(16px, $light-white, 500);
+  height: 3rem;
+  padding: 0;
+  @include flex-centerd(row, center, space-between);
+  & > div {
+    height: 100%;
+    @include flex-centerd();
+  }
+  .profile-img {
+    width: 15%;
+    & > img {
+      @include wh(100%, 100%);
+    }
+  }
+}
+.card-box {
+  @include flex-centerd(row, center, space-between);
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 2rem auto;
+  .blog-card {
+    width: 30%;
+    .img-sec {
+      width: 100%;
+      & > img {
+        @include wh(100%, 100%);
+      }
+    }
+    .heading {
+      @include font(20px, $white, 600);
+      margin: 1rem 0;
+    }
+    .highlight {
+      @include font(14px, $teal, 500);
+    }
+    .description {
+      @include font(14px, $light-white, 400);
+      margin: 1rem 0;
+    }
+    .date {
+    }
+    @include media(900px) {
+      width: 80%;
+      margin: 2rem auto 0 auto;
+    }
+    @include media(380px) {
+      width: 95%;
+    }
+  }
+}

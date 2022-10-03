@@ -1,0 +1,92 @@
+@import "../../App.scss";
+
+.trusted-partner {
+  background: $light-bg;
+  padding: 5rem 0;
+  overflow: hidden;
+  & > h1 {
+    @include section-heading(90deg, 25%, 80%, 50px, 100%);
+  }
+  & > h2 {
+    text-align: center;
+    @include font(50px, $white, 500);
+  }
+}
+
+.image-container {
+  width: 70%;
+  margin: 2rem auto 0 auto;
+  height: 70vh;
+}
+
+.image-container > img {
+  @include wh(100%, 100%);
+}
+
+.leftIn-animate {
+  animation: leftIn 0.6s ease forwards;
+}
+
+@keyframes leftIn {
+  0% {
+    transform: translate(195px, 81px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.leftOut-animate {
+  animation: leftOut 0.6s ease forwards;
+}
+
+@keyframes leftOut {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: translate(-135px, -69px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-145px, 80px);
+  }
+}
+
+.rightIn-animate {
+  animation: rightIn 0.6s ease forwards;
+}
+
+@keyframes rightIn {
+  0% {
+    transform: translate(-145px, 80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.rightOut-animate {
+  animation: rightOut 0.6s ease forwards;
+}
+
+@keyframes rightOut {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: translate(138px, -66px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(195px, 81px);
+  }
+}

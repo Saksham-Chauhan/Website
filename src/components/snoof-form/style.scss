@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.center-form {
+  @include flex-centerd();
+  @include wh();
+}
+
+.modal-sec {
+  @include wh();
+  padding: 1rem 1.5rem;
+  @include flex-centerd();
+  background: $light-bg;
+  & > div {
+    @include wh();
+  }
+}
+
+.default-css-none {
+  border: none;
+  outline: none;
+  color: $white;
+}
+
+.color-white {
+  color: $white;
+}
+label,
+p {
+  color: $white !important;
+}
+
+// button {
+//   background-color: $teal !important;
+//   color: $black !important;
+// }

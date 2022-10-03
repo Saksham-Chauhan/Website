@@ -1,0 +1,45 @@
+@import "../../App.scss";
+
+.technologies {
+  background-color: $light-bg;
+}
+
+.technologies > h1 {
+  @include section-heading(90deg, 35%, 75%, 50px, 100%);
+}
+
+.technologies > h2 {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  @include font(50px, $white, 500);
+}
+
+.images-container {
+  width: 90%;
+  margin: 2rem auto;
+  height: 76.5vh;
+  position: relative;
+}
+.images-container > img {
+  position: absolute;
+}
+
+.icons {
+  opacity: 0;
+  animation: pop-up 0.8s ease-in-out forwards;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

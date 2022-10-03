@@ -1,0 +1,30 @@
+@import "../../App.scss";
+
+.hero {
+  background-color: $background;
+  padding-bottom: 7rem;
+  & > h1,
+  p {
+    width: 54%;
+    margin: 7rem auto 0 auto;
+    text-align: center;
+  }
+  & > h1 {
+    line-height: 56px;
+    @include font(56px, $white, 500);
+    & > span {
+      @include gradient-text(to bottom, $teal, $white, 0%, 100%);
+    }
+  }
+  & > p {
+    margin-top: 1rem;
+    color: $light-white;
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 2rem;
+  }
+  & > button {
+    @include green-bg-button(16px, 28px, 16px);
+    @include mx-auto();
+  }
+}

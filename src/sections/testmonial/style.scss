@@ -1,0 +1,76 @@
+@import "../../App.scss";
+
+.testmonial {
+  background: $background;
+  padding: 2rem;
+}
+
+.testmonial > h1 {
+  @include section-heading(90deg, 35%, 75%, 50px, 80%, 0 auto);
+}
+
+.testmonial > p {
+  @include font(25px, $light-white, 400);
+  width: 60%;
+  margin: 1rem auto 0 auto;
+  line-height: 36px;
+  text-align: center;
+}
+.testmonial-info {
+  width: 75%;
+  margin: 2rem auto;
+  background: $light-bg;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  @include flex-centerd();
+}
+.testmonial-info > div {
+  width: 50%;
+  padding: 1rem;
+}
+
+.testmonial-info > :nth-child(1) > p {
+  @include font(22px, $white, 400);
+  line-height: 30px;
+  margin: 0 0 20px 0;
+}
+.testmonial-info > :nth-child(1) > button {
+  padding: 14px 28px;
+  background-color: $teal;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include font(14px, $white, 400);
+}
+
+.testmonial-info > :nth-child(2) {
+  color: $white;
+  @include flex-centerd();
+}
+.testmonial-info > :nth-child(2) > span {
+  margin-left: 1rem;
+  font-size: 30px;
+}
+
+.button-group {
+  width: 30%;
+  margin: 3rem auto 1rem auto;
+  @include flex-centerd();
+}
+
+.button-group > div {
+  width: 3.5rem;
+  border-radius: 50%;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: all 1s;
+}
+.button-group > div:hover {
+  opacity: 1;
+  transition: all 1s;
+}
+.button-group > div > img {
+  @include wh(100%, 100%);
+}

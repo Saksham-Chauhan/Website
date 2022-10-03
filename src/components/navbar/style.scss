@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.navbar {
+  @include flex-centerd();
+  padding: 1rem 1.5rem;
+  & > div {
+    width: 33%;
+    @include flex-centerd();
+    & > button {
+      margin: 0 1rem;
+    }
+  }
+  & > .logo-sec {
+    @include flex-centerd(row, center, left);
+    & > img {
+      cursor: pointer;
+    }
+    .mobile-logo {
+      display: none;
+    }
+    @include media(900px) {
+      width: 40%;
+    }
+    @include media(600px) {
+      .mobile-logo {
+        display: block;
+      }
+      .main-logo {
+        display: none;
+      }
+      width: 20%;
+    }
+    @include media(450px) {
+      width: 10%;
+    }
+  }
+  & > .mid-btn {
+    & > button {
+      @include simple-button();
+    }
+    @include media(905px) {
+      display: none;
+    }
+  }
+  & > .right-btn {
+    justify-content: right;
+    & > :nth-child(1) {
+      @include border-button();
+    }
+    & > :nth-child(2) {
+      @include green-bg-button();
+    }
+    @include media(1050px) {
+      width: 40%;
+    }
+    @include media(905px) {
+      width: 60%;
+    }
+    @include media(600px) {
+      width: 90%;
+    }
+    @include media(450px) {
+      width: 90%;
+      & > :nth-child(1) {
+        @include green-bg-button(6px, 14px, 14px);
+        margin: 0 10px;
+      }
+      & > :nth-child(2) {
+        @include border-button(6px, 14px, 14px);
+        margin: 0 10px;
+      }
+    }
+  }
+  @include media(320px) {
+    padding: 1rem 4px;
+    & > .right-btn {
+      & > button {
+        margin: 3px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "../../App.scss";
+.footer {
+  background-color: $light-bg;
+  padding: 2rem 5%;
+  @include flex-centerd(row, flex-start, center);
+  .address {
+    width: 30%;
+    @include flex-centerd(column, center, center);
+    & > div,
+    p {
+      width: 14rem;
+      font-size: 14px;
+      color: $light-white;
+      & > img {
+        @include wh(100%, 100%);
+      }
+    }
+    & > p {
+      padding-top: 1rem;
+      line-height: 1.5rem;
+    }
+    .social-media {
+      @include flex-centerd(row, center, space-between);
+      & > img {
+        width: 20%;
+      }
+    }
+    @include media(750px) {
+      display: none;
+    }
+  }
+  .btn-col {
+    width: 70%;
+    padding: 0 0 0 10%;
+    @include flex-centerd(row, flex-start, center);
+    & > div {
+      width: 25%;
+    }
+    @include media(1000px) {
+      padding: 0 0 0 5%;
+    }
+    @include media(870px) {
+      flex-wrap: wrap;
+      width: 58%;
+      padding: 0 0 0 7%;
+      & > div {
+        width: 50%;
+      }
+    }
+    @include media(750px) {
+      width: 65%;
+      padding: 0;
+      margin: 0 auto;
+      justify-content: space-between;
+      & > div {
+        width: 35%;
+      }
+    }
+    @include media(487px) {
+      width: 85%;
+    }
+    @include media(380px) {
+      & > div {
+        width: 45%;
+      }
+    }
+  }
+  .buttons-column {
+    .title {
+      padding-bottom: 1rem;
+      @include font(20px, $white, 600);
+    }
+    & > p {
+      padding: 0.5rem 0;
+      color: $light-white;
+      width: fit-content;
+      cursor: pointer;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+  @include media(750px) {
+    display: block !important;
+    & > .logo {
+      display: block;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+  }
+
+  @include media(870px) {
+    .buttons-column {
+      .title {
+        padding: 1.5rem 0 0.2rem 0;
+      }
+      & > p {
+        padding: 0.4rem 0;
+      }
+    }
+    @include flex-centerd(row, center, center);
+  }
+
+  @include media(1000px) {
+    padding: 2% 1rem;
+  }
+}
